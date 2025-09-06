@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensonics2K25 - Premier Technology Event</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>KONGU ENGINEERING COLLEGE</h2>
+                <h3>EIE Association</h3_>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#events" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#schedule" class="nav-link">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq" class="nav-link">FAQ</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="event-poster">
+                    <div class="poster-placeholder">
+                        <div class=".poster-placeholder img">
+                            <img src="Poster.png" alt="Event Poster" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <h2 class="countdown-title">Event Countdown</h2>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Events</h2>
+                <p class="section-subtitle">Explore our exciting range of technical and non-technical events</p>
+            </div>
+
+            <!-- Technical Domain -->
+            <div class="domain-section">
+                <div class="domain-header">
+                    <h3 class="domain-title">Technical Domain</h3>
+                    <div class="domain-line"></div>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Paper Presentation -->
+                    <div class="event-card" data-event="paper-presentation">
+                        <div class="event-image">
+                            <img src="PAPER.png" alt="Paper Presentation" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Paper Presentation</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('paper-presentation')">
+
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/paper-presentation')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Presentation -->
+                    <div class="event-card" data-event="project-presentation">
+                        <div class="event-image">
+                            <img src="PROJECT.png" alt="Project Presentation" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Project Presentation</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('project-presentation')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/project-presentation')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coding Contest -->
+                    <div class="event-card" data-event="coding-contest">
+                        <div class="event-image">
+                            <img src="CODING.png" alt="Coding Contest" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Coding Contest</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('coding-contest')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/coding-contest')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Circuit Debugging -->
+                    <div class="event-card" data-event="circuit-debugging">
+                        <div class="event-image">
+                            <img src="CIRCUIT.png" alt="Circuit Debugging" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Circuit Debugging</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('circuit-debugging')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/circuit-debugging')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Non-Technical Domain -->
+            <div class="domain-section">
+                <div class="domain-header">
+                    <h3 class="domain-title">Non-Technical Domain</h3>
+                    <div class="domain-line"></div>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Melodia -->
+                    <div class="event-card" data-event="melodia">
+                        <div class="event-image">
+                            <img src="MELODIA.png" alt="Melodia" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Melodia</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('melodia')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/melodia')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keys to Fortune -->
+                    <div class="event-card" data-event="keys-to-fortune">
+                        <div class="event-image">
+                            <img src="KEYS TO FORTUNE.png" alt="Keys to Fortune" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Keys to Fortune</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('keys-to-fortune')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/keys-to-fortune')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campus Voyage -->
+                    <div class="event-card" data-event="campus-voyage">
+                        <div class="event-image">
+                            <img src="MISSION CAMPUS.png" alt="Campus Voyage" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Campus Voyage</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('campus-voyage')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/campus-voyage')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sherlock Sense -->
+                    <div class="event-card" data-event="sherlock-sense">
+                        <div class="event-image">
+                            <img src="RANPO'S OBSERVATORY.png" alt="Sherlock Sense" />
+                        </div>
+                        <div class="event-info">
+                            <h3 class="event-title">Sherlock Sense</h3>
+                            <div class="event-buttons">
+                                <button class="btn-rules" onclick="showRules('sherlock-sense')">
+                                    Rules
+                                </button>
+                                <button class="btn-register"
+                                    onclick="registerEvent('https://forms.google.com/sherlock-sense')">
+                                    <i class="icon-register">🚀</i>
+                                    Register Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Rules Modal -->
+    <div id="rules-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Event Rules</h3>
+                <span class="close-modal" onclick="closeRulesModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="rules-content">
+                    <!-- Rules content will be populated dynamically -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-close" onclick="closeRulesModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Sensonics2K25</h2>
+            <div class="section-content">
+                <p>Sensonics2K25 is a premier technology and innovation event bringing together the brightest minds in
+                    the industry. Join us for an unforgettable experience of learning, networking, and technological
+                    advancement.</p>
+                <p>This event will feature cutting-edge presentations, interactive workshops, and networking
+                    opportunities with industry leaders and innovators from around the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2 class="section-title">Event Schedule</h2>
+            <div class="section-content">
+                <p>Detailed schedule and timeline of events will be announced soon. Stay tuned for updates!</p>
+                <div class="schedule-placeholder">
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:00 AM</div>
+                        <div class="schedule-event">Registration & Inagural</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">9:30 AM</div>
+                        <div class="schedule-event">Paper and Project</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">11:00</div>
+                        <div class="schedule-event">Coding</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">11:45 PM</div>
+                        <div class="schedule-event">Circuit Debugging</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="schedule-time">2:00 PM</div>
+                        <div class="schedule-event">Sherlock sense</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="section-content">
+                <p>Photo gallery from previous events and preparations for Sensonics2K25.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">Event Photo 1</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">Event Photo 2</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">Event Photo 3</div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">Event Photo 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <p>Get in touch with the organizing committee for any queries or information.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email:</strong> contact@sensonics2k25.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> +1-234-567-8900
+                    </div>
+                    <div class="contact-item">
+                        <strong>Event Date:</strong> October 9th, 2025
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-content">
+                <div class="faq-item">
+                    <h3 class="faq-question">When is Sensonics2K25?</h3>
+                    <p class="faq-answer">Sensonics2K25 will be held on October 9th, 2025.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How can I register for the event?</h3>
+                    <p class="faq-answer">Registration details will be announced soon. Please check our website for
+                        updates or contact us directly.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What should I expect at the event?</h3>
+                    <p class="faq-answer">You can expect cutting-edge presentations, interactive workshops, networking
+                        opportunities, and insights from industry leaders.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is there a registration fee?</h3>
+                    <p class="faq-answer">Registration fee information will be provided when registration opens. Early
+                        bird discounts may be available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sensonics2K25</h3>
+                    <p>Premier Technology & Innovation Event</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: contact@sensonics2k25.com</p>
+                    <p>Phone: +1-234-567-8900</p>
+                    <p>Event Date: October 9th, 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sensonics2K25. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
