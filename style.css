@@ -1097,16 +1097,32 @@ html {
 /* Gallery */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, 250px);
+    /* fixed width columns */
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: center;
+    /* center the grid if fewer items */
 }
 
 .gallery-item {
-    aspect-ratio: 1;
+    width: 250px;
+    /* fixed width */
+    height: 250px;
+    /* fixed height */
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease;
+    position: relative;
+    /* for overlay if needed */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* cover to fill the box, cropping excess */
+    display: block;
 }
 
 .gallery-item:hover {
