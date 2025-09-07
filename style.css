@@ -792,7 +792,7 @@ html {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: auto;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1048,16 +1048,16 @@ html {
 }
 
 .section-content {
-    max-width: 800px;
+    max-width: auto;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .section-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: var(--color-text-secondary);
+    color: whitesmoke;
 }
 
 /* Schedule */
@@ -1142,65 +1142,7 @@ html {
 }
 
 /* Contact */
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-}
 
-.contact-item {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.contact-form {
-    max-width: 500px;
-    margin: 2rem auto;
-    text-align: left;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #0074D9;
-}
-
-.btn {
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #0074D9, #39CCCC);
-    color: #fff;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 116, 217, 0.3);
-}
 
 /* FAQ */
 .faq-item {
@@ -1828,5 +1770,125 @@ html {
 
     .event-title {
         font-size: 1.2rem;
+    }
+}
+
+.section-cont {
+    max-width: auto;
+    margin: 0 auto;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+.container-gal {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
+    /* Dark blue gradient background */
+    padding: 40px 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(0, 84, 166, 0.2);
+    color: #ffffff;
+}
+
+/* Faculty Cards Row */
+.faculty-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.faculty-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 84, 166, 0.25);
+    width: 220px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: default;
+}
+
+.faculty-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 36px rgba(0, 84, 166, 0.4);
+}
+
+.faculty-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.faculty-card h3 {
+    color: #001f3f;
+    /* Dark navy blue */
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* Event Coordinator Cards Row */
+.events-row-gal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+    margin-top: 16px;
+}
+
+.event-card-gal {
+    background: linear-gradient(135deg, #a3c0f9 60%, #5486e9 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 84, 166, 0.35);
+    padding: 24px 20px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: default;
+}
+
+.event-card-gal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 28px rgba(0, 84, 166, 0.5);
+}
+
+.event-card-gal h4 {
+    color: #001f3f;
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.event-card-gal p {
+    color: #0c2d66;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.event-card-gal span {
+    font-size: 1.1rem;
+    color: #072146;
+    letter-spacing: 1.1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .faculty-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faculty-card {
+        width: 90%;
+        margin-bottom: 24px;
+    }
+
+    .events-row-gal {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

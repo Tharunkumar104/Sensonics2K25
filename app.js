@@ -629,14 +629,3 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Non-Technical Events: Melodia, Keys to Fortune, Campus Voyage, Sherlock Sense');
 });
 
-const images = document.querySelectorAll('.gallery-grid img');
-let current = 0;
-
-function showNextImage() {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-}
-
-images[current].classList.add('active');
-setInterval(showNextImage, 3000);  // Rotate every 3 seconds
